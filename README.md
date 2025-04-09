@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍕 Nostra Nona Pizzaria
 
-## Getting Started
+[![Deploy Status](https://img.shields.io/badge/deploy-online-success)](https://nostra-nona.vercel.app)
+[![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)](https://reactjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-First, run the development server:
+## 📋 Sobre o Projeto
+
+Site oficial da Nostra Nona Pizzaria, a autêntica pizza italiana em São Paulo. Este projeto foi desenvolvido com tecnologias modernas para proporcionar uma experiência de usuário excepcional.
+
+## 🖥️ Demonstração
+
+[![Nostra Nona Pizzaria](./public/telaprincipal.png)](https://nostra-nona.vercel.app)
+
+[Visite o site](https://nostra-nona.vercel.app)
+
+## ✨ Funcionalidades
+
+- 🍽️ Cardápio digital interativo
+- 📅 Sistema de reservas online
+- 🚚 Pedidos para delivery
+- 💼 Área para candidatura de empregos
+- 🎁 Programa de fidelidade
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Frontend**: React, Next.js, TypeScript
+- **Estilização**: Tailwind CSS
+- **Deploy**: Vercel
+- **Gerenciamento de Estado**: Context API
+- **Formulários**: React Hook Form
+
+## 🚀 Como Executar o Projeto
 
 ```bash
+# Clone este repositório
+git clone https://github.com/seu-usuario/nostra-nona.git
+
+# Acesse a pasta do projeto
+cd nostra-nona
+
+# Instale as dependências
+npm install
+
+# Execute a aplicação em modo de desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# A aplicação será aberta na porta:3000 - acesse http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🤝 Contribuição
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Contribuições são bem-vindas! Sinta-se à vontade para verificar a página de issues ou enviar um pull request.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📝 Licença
 
-## Learn More
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-To learn more about Next.js, take a look at the following resources:
+## 📞 Contato
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Nostra Nona Pizzaria - [contato@nostranona.com.br](mailto:contato@nostranona.com.br)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+CNPJ: 30.303.209/0001-95
 
-## Deploy on Vercel
+Rua da Pizza, 1004 - São Paulo, SP
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Telefone: (11) 5051-1229 | WhatsApp: (11) 94023-8329
