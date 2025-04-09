@@ -1,0 +1,385 @@
+.menuPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.menuHero {
+  background-color: #c50000;
+  color: rgb(194, 4, 4);
+  padding: 6rem 0 4rem;
+  text-align: center;
+  margin-bottom: 0;
+  padding-top: 240px;
+  background-image: linear-gradient(
+      rgba(8, 8, 8, 0.85),
+      rgba(230, 151, 151, 0.85)
+    ),
+    url("https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2670&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+}
+
+.menuHero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: white;
+}
+
+.menuHero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+.menuNavigation {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2.5rem 0;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.menuNavigation button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.2s;
+  white-space: nowrap;
+  color: #cccccc;
+}
+
+.menuNavigation button:hover {
+  background-color: #333333;
+}
+
+.menuNavigation .activeCategory {
+  background-color: #c50000;
+  color: white;
+}
+
+.menuSection {
+  padding: 2rem 0 4rem;
+  background-color: var(--background);
+}
+
+.categoryTitle {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #c50000;
+}
+
+.categoryDescription {
+  color: #cccccc;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+.menuGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  background: #333333;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.menuItem:hover {
+  transform: translateY(-5px);
+}
+
+.menuItemImage {
+  position: relative;
+  height: 200px;
+  background-color: #222222;
+  overflow: hidden;
+}
+
+.pizzaImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.menuItem:hover .pizzaImage {
+  transform: scale(1.1);
+}
+
+.menuItemInfo {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.menuItemInfo h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.ingredients {
+  color: #cccccc;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.priceRow {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.sizes {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sizes span {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #cccccc;
+}
+
+.prices {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.prices span {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.singlePrice {
+  display: block;
+  margin-bottom: 1.5rem;
+  text-align: right;
+}
+
+.singlePrice span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.orderButton {
+  width: 100%;
+  background-color: #c50000;
+  color: white;
+  border: none;
+  padding: 0.75rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.orderButton:hover {
+  background-color: #980000;
+  transform: translateY(-2px);
+}
+
+/* Modal de Seleção de Tamanho */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.sizeModal {
+  background-color: #333333;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.closeModal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #cccccc;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.closeModal:hover {
+  color: #ffffff;
+}
+
+.sizeModal h3 {
+  font-size: 1.8rem;
+  color: #c50000;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.pizzaName {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.sizeOptions {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.sizeOption {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px;
+  background-color: #222222;
+  border: 2px solid #444444;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sizeOption:hover {
+  background-color: #c50000;
+  border-color: #c50000;
+  transform: translateY(-5px);
+}
+
+.sizeCircle {
+  width: 70px;
+  height: 70px;
+  background-color: #c50000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.sizeLabel {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.sizeDescription {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.sizePrice {
+  color: #c50000;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .menuGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .menuHero {
+    padding: 5rem 0 3rem;
+    padding-top: 180px;
+  }
+
+  .menuHero h1 {
+    font-size: 2.5rem;
+  }
+
+  .menuNavigation {
+    padding-top: 10px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: nowrap;
+  }
+
+  .menuNavigation button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .sizeOptions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .menuNavigation {
+    justify-content: flex-start;
+  }
+
+  .menuHero h1 {
+    font-size: 2rem;
+  }
+
+  .menuItemInfo h3 {
+    font-size: 1.3rem;
+  }
+
+  .menuItem {
+    margin: 0 0.5rem;
+  }
+}

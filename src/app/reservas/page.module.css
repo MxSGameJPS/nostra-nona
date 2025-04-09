@@ -1,0 +1,377 @@
+.reservasPage {
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.pageHeader {
+  background-color: #c50000;
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+  margin-bottom: 60px;
+  padding-top: 140px;
+  background-image: linear-gradient(rgba(8, 8, 8, 0.75), rgba(197, 0, 0, 0.75)),
+    url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=2000&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+}
+
+.pageHeader h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.pageHeader p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.reservasGrid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 40px;
+}
+
+.reservasForm {
+  background-color: #333333;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.reservasForm h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #c50000;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.reservasForm h2::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: #c50000;
+  bottom: 0;
+  left: 0;
+}
+
+.formIntro {
+  margin-bottom: 30px;
+  color: #cccccc;
+  font-size: 1.1rem;
+}
+
+.successMessage,
+.errorMessage {
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  animation: fadeIn 0.3s ease;
+}
+
+.successMessage {
+  background-color: rgba(0, 128, 0, 0.15);
+  border: 1px solid rgba(0, 128, 0, 0.3);
+  color: #22c55e;
+}
+
+.errorMessage {
+  background-color: rgba(220, 38, 38, 0.15);
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  color: #ef4444;
+}
+
+.successMessage i,
+.errorMessage i {
+  font-size: 1.5rem;
+}
+
+.successMessage p,
+.errorMessage p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.formRow {
+  display: flex;
+  gap: 20px;
+}
+
+.formRow .formGroup {
+  flex: 1;
+}
+
+.form label {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.form input,
+.form select,
+.form textarea {
+  padding: 12px 15px;
+  border: 1px solid #444444;
+  border-radius: 4px;
+  background-color: #222222;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  border-color: #c50000;
+  outline: none;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #777777;
+}
+
+.formPolicy {
+  font-size: 0.85rem;
+  color: #aaaaaa;
+  margin-top: 10px;
+}
+
+.formPolicy a {
+  color: #c50000;
+  text-decoration: underline;
+}
+
+.submitButton {
+  background-color: #c50000;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #9c0000;
+  transform: translateY(-2px);
+}
+
+.submitButton:disabled {
+  background-color: #888888;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.submitButton i {
+  margin-right: 8px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Reservas Info */
+.reservasInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.infoCard {
+  background-color: #333333;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.infoCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  color: #c50000;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.infoCard h3::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: #c50000;
+  bottom: 0;
+  left: 0;
+}
+
+.infoList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.infoList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  color: #cccccc;
+}
+
+.infoList i {
+  color: #c50000;
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+.infoList h4 {
+  margin: 0 0 5px;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.infoList p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.restaurantCard {
+  background-color: #333333;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.restaurantImage {
+  position: relative;
+  height: 250px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.locationImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.restaurantCard:hover .locationImg {
+  transform: scale(1.05);
+}
+
+.restaurantInfo {
+  padding: 25px;
+}
+
+.restaurantInfo h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #c50000;
+}
+
+.restaurantInfo address {
+  font-style: normal;
+  color: #cccccc;
+}
+
+.restaurantInfo address p {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.restaurantInfo address i {
+  color: #c50000;
+  width: 20px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .reservasGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .pageHeader {
+    padding: 40px 0;
+    padding-top: 150px;
+  }
+
+  .pageHeader h1 {
+    font-size: 2.5rem;
+  }
+
+  .formRow {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .reservasForm {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageHeader h1 {
+    font-size: 2rem;
+  }
+
+  .reservasForm h2 {
+    font-size: 1.8rem;
+  }
+}

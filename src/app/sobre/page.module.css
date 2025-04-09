@@ -1,0 +1,221 @@
+.sobrePage {
+  min-height: 100vh;
+}
+
+.pageHeader {
+  background-color: var(--primary);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.pageHeader h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.pageHeader p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  background-color: var(--primary);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* História Section */
+.historiaSection {
+  padding: 60px 0;
+}
+
+.historiaContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.historiaImagem {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.historiaImagem img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.historiaImagem:hover img {
+  transform: scale(1.05);
+}
+
+.historiaTexto h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.historiaTexto h2::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary);
+  bottom: 0;
+  left: 0;
+}
+
+.historiaTexto p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--dark-gray);
+}
+
+/* Valores Section */
+.valoresSection {
+  padding: 80px 0;
+  background-color: var(--light-gray);
+}
+
+.valoresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.valorCard {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.valorCard:hover {
+  transform: translateY(-10px);
+}
+
+.valorIcon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.valorCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+
+.valorCard p {
+  color: var(--dark-gray);
+  line-height: 1.6;
+}
+
+/* Equipe Section */
+.equipeSection {
+  padding: 80px 0;
+}
+
+.equipeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.membroCard {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.membroCard:hover {
+  transform: translateY(-10px);
+}
+
+.membroImagem {
+  height: 300px;
+  overflow: hidden;
+}
+
+.membroImagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.membroCard:hover .membroImagem img {
+  transform: scale(1.1);
+}
+
+.membroCard h3 {
+  font-size: 1.5rem;
+  margin: 20px 0 5px;
+  padding: 0 20px;
+  color: var(--primary);
+}
+
+.membroCard p {
+  padding: 0 20px 20px;
+  color: var(--dark-gray);
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.membroCard p:first-of-type {
+  color: var(--secondary);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .historiaContent {
+    grid-template-columns: 1fr;
+  }
+  
+  .historiaImagem {
+    margin-bottom: 30px;
+  }
+  
+  .pageHeader h1 {
+    font-size: 2.5rem;
+  }
+} 
